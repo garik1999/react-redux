@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-const _getAppState = (state) => state;
+const _getAppState = (state) => state.app;
 
 export const getAppState = createSelector(
 	[_getAppState],

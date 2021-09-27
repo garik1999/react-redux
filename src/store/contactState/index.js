@@ -1,0 +1,1 @@
+export { contactState } from "./reducer";

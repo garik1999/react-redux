@@ -1,26 +1,60 @@
 import {
 	PageContacts,
 	PageHome,
-} from 'pages';
+	PageProfile,
+	PageContactProfile,
+	PageError,
+} from "pages";
 
 const routes = {
-	'home': {
-		path: '/',
+	home: {
+		path: "/",
 		page: PageHome,
-		name: 'Home',
-		link () {
+		name: "Home",
+		link() {
 			return this.path;
 		},
 		exact: true,
+		private: false,
 	},
-	'contacts': {
-		path: '/',
+	profile: {
+		path: "/profile",
+		page: PageProfile,
+		name: "Profile",
+		link() {
+			return this.path;
+		},
+		private: true,
+	},
+	contacts: {
+		path: "/contacts",
 		page: PageContacts,
-		name: 'Contacts',
-		link () {
+		name: "Contacts",
+		link() {
 			return this.path;
 		},
 		exact: true,
+		private: true,
+	},
+	contact: {
+		path: "/contacts/:contactId",
+		page: PageContactProfile,
+		name: "Contact profile",
+		link() {
+			return this.path;
+		},
+		exact: true,
+		private: true,
+	},
+	errorPage: {
+		path: "*",
+		page: PageError,
+		name: "Error Page",
+		link() {
+			return this.path;
+		},
+		exact: true,
+		private: false,
 	},
 };
 
