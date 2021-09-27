@@ -1,1 +1,0 @@
-export { ContactsItems } from "./container";

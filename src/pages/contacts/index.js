@@ -1,1 +1,0 @@
-export { PageContacts } from "./container";

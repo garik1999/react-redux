@@ -1,1 +1,0 @@
-export { PageProfile } from './container';
