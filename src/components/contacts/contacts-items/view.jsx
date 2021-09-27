@@ -190,6 +190,7 @@ const View = (props) => {
 
 	useEffect(() => {
 		onFormChange();
+
 		if (!fullName && !gender && !nat) {
 			setData(props.dataSource);
 			setStat(sumStatistic(props.dataSource));

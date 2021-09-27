@@ -6,7 +6,6 @@ import { updateListState } from "../../../store/contactState/actions";
 const mapStateToProps = (state) => {
 	return {
 		dataSource: state.contacts.contact.results,
-		fetching: state.contacts.fetching,
 		current: state.contactState.currentList,
 		pageSize: state.contactState.pageSizeList,
 	};

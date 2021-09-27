@@ -5,8 +5,6 @@ import { updateTableState } from "../../../store/contactState/actions";
 
 const mapStateToProps = (state) => {
 	return {
-		dataSource: state.contacts.contact.results,
-		fetching: state.contacts.fetching,
 		current: state.contactState.currentTable,
 		pageSize: state.contactState.pageSizeTable,
 	};

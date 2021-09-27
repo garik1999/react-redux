@@ -5,7 +5,7 @@ import { SearchForm } from "../search-form";
 import { Statistics } from "../statistics";
 
 const View = (props) => {
-	const { data, stat, fetching, form, onFormChange, columns} = props
+	const { data, stat, fetching, form, onFormChange, columns, current, pageSize} = props
 
 	return (
 		<Table
@@ -16,8 +16,8 @@ const View = (props) => {
 				onChange: (page, size) => {
 					props.dispatchPage(page, size);
 				},
-				current: props.current,
-				pageSize: props.pageSize,
+				current,
+				pageSize,
 				size: "small",
 			}}
 			size="small"

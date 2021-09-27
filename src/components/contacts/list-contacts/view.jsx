@@ -6,7 +6,7 @@ import { Statistics } from "../statistics";
 import { CardContact } from "../card-contacts";
 
 const View = (props) => {
-	const { data, stat, fetching, form, onFormChange} = props
+	const { data, stat, fetching, form, onFormChange, current, pageSize} = props
 
 	return (
 		<List
@@ -37,8 +37,8 @@ const View = (props) => {
 				onChange: (page, size) => {
 					props.dispatchPage(page, size);
 				},
-				current: props.current,
-				pageSize: props.pageSize,
+				current,
+				pageSize,
 				defaultPageSize: 6,
 				size: "small",
 				showSizeChanger: true,
